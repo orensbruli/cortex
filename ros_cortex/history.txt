@@ -1,0 +1,204 @@
+cd cortex/
+cd ros_cortex/
+sudo apt update
+rosdep update
+rosdep install --from-paths . --ignore-src -y
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=ros_cortex/src/gui/CMakeLists.txt
+
+--------
+rm build/ install/ log/
+rosdep install --from-paths . --ignore-src -y
+colcon build
+ls
+rm build/ install/ log/
+ls
+rm -r build/
+rm -r build/ install/ log/
+rm -r install/ log/
+colcon build
+find / | grep RTPSDomain.h
+colcon build
+source /opt/ros/humble/setup.bash
+colcon build
+cat /opt/ros/humble/include/fastrtps/fastrtps/config.h
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rosdep install --from-paths . --ignore-src -y
+rm -r build/ install/ log/
+colcon build
+colcon --log-level debug build
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake --build /cortex/ros_cortex/build/ros2_cortex --
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B -S /cortex/ros_cortex/build/ros2_cortex --trace-source=CMakeLists.txt --trace-expand --
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/build/ros2_cortex --trace-source=CMakeLists.txt --trace-expand --
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/build/ros2_cortex --trace-source=CMakeLists.txt --trace-expand
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros2_cortex --trace-source=CMakeLists.txt --trace-expand
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+find . | grep -i FindFast
+find . | grep -i Find
+find / | grep -i Find
+find / | grep -i FindFast
+cat /opt/ros/humble/share/fastrtps_cmake_module/cmake/Modules/FindFastRTPS.cmake
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+rm -r build/ install/ log/
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+rm -r build/ install/ log/
+colcon build
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B install -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+cmake --build
+
+colcon build
+colcon --log-level debug build
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake --build /cortex/ros_cortex/build/ros2_cortex -- -j8 -l8
+cd build/
+ls
+cd ros2_cortex/
+ls
+make
+cat /opt/ros/humble/share/fastrtps_cmake_module/cmake/Modules/FindFastRTPS.cmake
+q
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake --build /cortex/ros_cortex/build/ros2_cortex -- -j8 -l8
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+cat /opt/ros/humble/share/fastrtps_cmake_module/cmake/Modules/FindFastRTPS.cmake
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+rm -r build/ install/ log/
+AMENT_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/cortex/ros_cortex/install/cppitertools_vendor:/opt/ros/humble /usr/bin/cmake -B build -S /cortex/ros_cortex/ros_cortex/ --trace-source=CMakeLists.txt --trace-expand
+colcon --log-level debug build
+cd ..
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+cat /opt/ros/humble/share/fastrtps_cmake_module/cmake/Modules/FindFastRTPS.cmake
+declare -x CMAKE_PREFIX_PATH="/opt/ros/humble"
+colcon --log-level debug build
+cat /opt/ros/humble/share/fastrtps_cmake_module/cmake/Modules/FindFastRTPS.cmake
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+find / | grep fastrtps/config.h
+rm -r build/ install/ log/
+find / | grep fastrtps/config.h
+colcon --log-level debug build
+ls /opt/ros/humble/include/fastrtps/fastrtps/log/Log.h
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+ls /opt/ros/humble/include/fastrtps/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+rm -r build/ install/ log/
+colcon --log-level debug build
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+curl -O https://raw.githubusercontent.com/robocomp/robocomp/$branch/classes/threadpool/threadpool.h
+wget https://raw.githubusercontent.com/robocomp/robocomp/$branch/classes/threadpool/threadpool.h
+sudo apt install curl
+curl -O https://raw.githubusercontent.com/robocomp/robocomp/$branch/classes/threadpool/threadpool.h
+mkdir cortex/ros_cortex/ros_cortex/src/api/include/dsr/api/threadpool/
+mkdir /cortex/ros_cortex/ros_cortex/src/api/include/dsr/api/threadpool/
+mv threadpool.h /cortex/ros_cortex/ros_cortex/src/api/include/dsr/api/threadpool/
+colcon build
+curl -O https://raw.githubusercontent.com/robocomp/robocomp/development/classes/threadpool/threadpool.h
+cat threadpool.h
+mv threadpool.h /cortex/ros_cortex/ros_cortex/src/api/include/dsr/api/threadpool/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+fid / | -i Findcpp
+fid / | grep -i Findcpp
+find / | grep -i Findcpp
+find / | grep -i Finditer
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rm -r build/ install/ log/
+colcon build
+rosdep install --from-paths . --ignore-src -y
+colcon build
+---
+cd cortex/
+cd ros_cortex/
+sudo apt update
+rosdep update
+rosdep install --from-paths . --ignore-src -y
+sudo apt update
+rosdep update
+rosdep install --from-paths . --ignore-src -y
+colcon build
+ls /cortex/ros_cortex/build/cppitertools_vendor/
+colcon build
+ls /cortex/ros_cortex/install/cppitertools_vendor/share/cppitertools_vendor/cmake/
+ls /cortex/ros_cortex/install/cppitertools_vendor/share/cppitertools_vendor/cmake/../../../cppitertools_vendor-ext
+ls /cortex/ros_cortex/install/cppitertools_vendor/share/cppitertools_vendor/cmake/../../../
+ls /cortex/ros_cortex/install/cppitertools_vendor/share/cppitertools_vendor/cmake/../../../include/
+ls /cortex/ros_cortex/install/cppitertools_vendor/share/cppitertools_vendor/cmake/../../../include/cppitertools_vendor/
+colcon --log-level debug build
+colcon --log-level debug --executor sequential build --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+colcon --log-level debug build --executor secuential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+ls /cortex/ros_cortex/build/cppitertools_vendor/include
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+rm -r build/ install/ log/
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+rm -r build/ install/ log/
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+rm -r build/ install/ log/
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+rm -r build/ install/ log/
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+ls /cortex/ros_cortex/build/cppitertools_vendor/cppitertools_external_project/install/
+ls /cortex/ros_cortex/build/cppitertools_vendor/cppitertools_external_project/install/include/
+ls /cortex/ros_cortex/build/cppitertools_vendor/cppitertools_external_project/install/include/cppitertools/
+rm -r build/ install/ log/
+colcon --log-level debug build --executor sequential --cmake-args --trace-expand --trace-source=cppitertools_vendor/CMakeLists.txt
+ls /cortex/ros_cortex/build/cppitertools_vendor/cppitertools_external_project/install/include
