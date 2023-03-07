@@ -43,7 +43,7 @@ find_package(FastRTPS REQUIRED MODULE)
 SET(CMAKE_AUTOMOC ON)
 SET(CMAKE_AUTOUIC ON)
 
-include(ExternalProject)
+include(FetchContent)
 # cppitertools
 fetchcontent_declare(
         cppitertools
