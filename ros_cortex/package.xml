@@ -12,7 +12,10 @@
   <buildtool_depend>libopenscenegraph</buildtool_depend>
   <buildtool_depend>libqt5-opengl-dev</buildtool_depend>
   <buildtool_depend>libqglviewer-dev-qt5</buildtool_depend>
+  <buildtool_depend>fastrtps_cmake_module</buildtool_depend>
   <buildtool_depend>fastrtps</buildtool_depend>
+  <buildtool_depend>eigen</buildtool_depend>
+  <buildtool_depend>git</buildtool_depend>
 
 
 <!--  <test_depend>ament_lint_auto</test_depend>-->
