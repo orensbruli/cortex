@@ -48,10 +48,11 @@ ExternalProject_Add(
         cppitertools
         PREFIX ${CMAKE_BINARY_DIR}/cppitertools
         GIT_REPOSITORY https://github.com/ryanhaining/cppitertools.git
+        GIT_TAG "master"
         CONFIGURE_COMMAND ""
-        BUILD_COMMAND ""
-        INSTALL_COMMAND ""
-        LOG_DOWNLOAD ON
+        BUILD_COMMAND     ""
+        INSTALL_COMMAND   ""
+        TEST_COMMAND      ""
 )
 ExternalProject_Get_Property(cppitertools source_dir)
 set(cppitertoolsIncludeDir ${source_dir}/../)
