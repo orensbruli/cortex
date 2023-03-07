@@ -15,8 +15,8 @@
   <buildtool_depend>fastrtps_cmake_module</buildtool_depend>
   <buildtool_depend>fastrtps</buildtool_depend>
   <buildtool_depend>eigen</buildtool_depend>
-  <buildtool_depend>git</buildtool_depend>
-  <buildtool_depend>ca-certificates</buildtool_depend>
+  <buildtool_depend>git</buildtool_depend>  <!-- ExternalProject in cmake -->
+  <buildtool_depend>ca-certificates</buildtool_depend> <!-- https for git -->
 
 
 <!--  <test_depend>ament_lint_auto</test_depend>-->

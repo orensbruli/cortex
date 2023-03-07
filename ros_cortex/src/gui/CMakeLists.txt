@@ -44,18 +44,27 @@ SET(CMAKE_AUTOMOC ON)
 SET(CMAKE_AUTOUIC ON)
 
 include(ExternalProject)
-ExternalProject_Add(
+# cppitertools
+fetchcontent_declare(
         cppitertools
-        PREFIX ${CMAKE_BINARY_DIR}/cppitertools
-        GIT_REPOSITORY https://github.com/ryanhaining/cppitertools.git
-        GIT_TAG "master"
-        CONFIGURE_COMMAND ""
-        BUILD_COMMAND     ""
-        INSTALL_COMMAND   ""
-        TEST_COMMAND      ""
-)
-ExternalProject_Get_Property(cppitertools source_dir)
-set(cppitertoolsIncludeDir ${source_dir}/../)
+        GIT_REPOSITORY https://github.com/ryanhaining/cppitertools
+        SOURCE_DIR ${CMAKE_CURRENT_BINARY_DIR}/External/cppitertools
+        GIT_TAG 539a5be8359c4330b3f88ed1821f32bb5c89f5f6  # v2.0.1
+        UPDATE_COMMAND "")
+fetchcontent_makeavailable(cppitertools)
+set(cppitertools_INCLUDE_DIRS ${CMAKE_CURRENT_BINARY_DIR}/External)
+#ExternalProject_Add(
+#        cppitertools
+#        PREFIX ${CMAKE_BINARY_DIR}/cppitertools
+#        GIT_REPOSITORY https://github.com/ryanhaining/cppitertools.git
+#        GIT_TAG "master"
+#        CONFIGURE_COMMAND ""
+#        BUILD_COMMAND     ""
+#        INSTALL_COMMAND   ""
+#        TEST_COMMAND      ""
+#)
+#ExternalProject_Get_Property(cppitertools source_dir)
+#set(cppitertoolsIncludeDir ${source_dir}/../)
 
 # TODO: look for a better way to get automoc getting over .h files
 set(headers_to_moc
