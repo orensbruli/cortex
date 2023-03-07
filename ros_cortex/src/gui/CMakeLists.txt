@@ -46,7 +46,7 @@ SET(CMAKE_AUTOUIC ON)
 include(ExternalProject)
 ExternalProject_Add(
         cppitertools
-        PREFIX ${CMAKE_BINARY_DIR}/glm
+        PREFIX ${CMAKE_BINARY_DIR}/cppitertools
         GIT_REPOSITORY https://github.com/ryanhaining/cppitertools.git
         CONFIGURE_COMMAND ""
         BUILD_COMMAND ""
@@ -54,7 +54,7 @@ ExternalProject_Add(
         LOG_DOWNLOAD ON
 )
 ExternalProject_Get_Property(cppitertools source_dir)
-set(GlmIncludeDir ${source_dir}/../)
+set(cppitertoolsIncludeDir ${source_dir}/../)
 
 # TODO: look for a better way to get automoc getting over .h files
 set(headers_to_moc
@@ -112,7 +112,7 @@ target_include_directories(dsr_gui
         # TODO: Don't like, try to fix
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../../classes/>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../../classes/>
-        $<BUILD_INTERFACE:${GlmIncludeDir}>
+        $<BUILD_INTERFACE:${cppitertoolsIncludeDir}>
         PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
         $<INSTALL_INTERFACE:>
